@@ -1,0 +1,53 @@
+<div class="auth-box-wrap">
+  <div class="box-holder">
+      <div class="box-body">
+          <div class="hd-wrap">
+              <h2>Signin</h2>
+          </div>
+          <div class="form-wrap">
+              <form [formGroup]="loginForm" (ngSubmit)="login()" class="row">
+                  <div class="form-holder">
+                      <label>Email Address *</label>
+                      <input type="text" class="form-control" formControlName="email" placeholder="Enter your email address …"/>
+                      <span class="col-12 help-block bottom text-left fs12 t-red" *ngFor="let validation of errors.email">
+                          <span  *ngIf="(loginForm.get('email')?.hasError(validation.type) && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)||(isValid == true && loginForm.get('email').untouched && !loginForm.get('email').dirty && validation.type=='required'))">
+                              {{validation.message}}
+                          </span>
+                      </span>
+                  </div>
+                  <div class="form-holder">
+                      <div class="password-wrap">
+                          <label>Password *</label>
+                           <input [type]="show ? 'password' : 'text'" class="form-control" formControlName="password" placeholder="Enter password (at least 8 characters) …" autocomplete="password"/>
+                           <a class="shw-hde" (click)="toggleShow()" >
+                              <img  src="../../../../assets/images/eye-icon-show.png" *ngIf="show">
+                              <img src="../../../../assets/images/eye-icon-cross.png" *ngIf="!show"></a>
+                      </div>
+                      <span class="col-12 help-block bottom text-left fs12 t-red" *ngFor="let validation of errors.password">
+                          <span  *ngIf="(loginForm.get('password')?.hasError(validation.type) && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)||(isValid == true && loginForm.get('password').untouched && !loginForm.get('password').dirty && validation.type=='required'))">
+                              {{validation.message}}
+                          </span>
+                      </span>
+                  </div>
+                 <!--  <div class="form-holder text-center">
+                      <a class="link-text" routerLink="auth/forgotpass"  >Forgot Password?</a>
+                  </div> -->
+                  <div class="form-holder text-center pt-2">
+                      <button type="submit" class="submit-btn">Sign in now</button>
+                  </div>
+              </form>
+          </div>
+          <div class="or-wrap">
+              <p>or</p>
+          </div>
+          <div #gbutton class="signin-google-wrap"></div>
+
+          <!-- <div class="signin-google-wrap">
+              <a class="google-btn" href="javascript:void(0)" (click)="signInWithgoogle()"><img src="../../../../assets/logo_google.png" alt="google logo">Sign in with Google</a>
+          </div> -->
+          <div class="signup-wrap">
+              <p>Don’t have account? <a class="link-text" routerLink="/auth/signup" >Sign Up</a></p>
+          </div>
+      </div>
+  </div>
+</div>

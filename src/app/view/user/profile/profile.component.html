@@ -1,0 +1,58 @@
+<div class="container   ">
+  <div class="main-body pt-5">
+
+        <div class="row gutters-sm">
+          <div class="col-md-8">
+            <div class="card mb-3">
+              <div class="card-body" *ngIf="currentUser.isEmailVerified">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Full Name</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{currentUser.fname}} {{currentUser.lname}}
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Email</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{currentUser.email}}
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Date Of Birth</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{currentUser.dob | date : "MMM d, y"}}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="card" *ngIf="!currentUser.isEmailVerified">
+          <div class="card-body text-center">
+            <h5 class="card-title">Account verification required</h5>
+            <p class="card-text">To complete your account verification, we will send an email to your registered address.</p>
+            <a href="javascript:void(0);" class="btn btn-primary" (click)="reSendEmail()" *ngIf="!sending">Resend Link</a>
+            <div class="loader" *ngIf="sending">
+              <div class="spinner-grow text-secondary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <div class="spinner-grow text-success" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

@@ -1,0 +1,117 @@
+.auth-box-wrap .box-holder {
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+  padding: 60px 0 60px;
+  position: relative;
+}
+.auth-box-wrap .box-holder .cross-iocn {
+  position: absolute;
+  top: 0px;
+  right: -60px;
+  z-index: 3;
+  cursor: pointer;
+}
+.auth-box-wrap .box-holder .hd-wrap {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.auth-box-wrap .box-holder .hd-wrap h2 {
+  margin: 15px;
+}
+.auth-box-wrap .box-holder .link-text {
+  font-weight: 700;
+}
+.submit-btn {
+  display: inline-block;
+  min-width: 350px;
+  margin: auto;
+  padding: 20px 15px;
+  background: var(--pink);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+}
+.privacy-wrap {
+  text-align: center;
+}
+.privacy-wrap b {
+  color: #000;
+  font-weight: 700;
+}
+.or-wrap p {
+  text-align: center;
+  margin: 0;
+  position: relative;
+}
+.or-wrap p:after {
+  position: absolute;
+  left: 0;
+  width: 43%;
+  height: 1px;
+  background: #f1f1f1;
+  top: 50%;
+  content: "";
+}
+.or-wrap p:before {
+  position: absolute;
+  right: 0;
+  width: 43%;
+  height: 1px;
+  background: #f1f1f1;
+  top: 50%;
+  content: "";
+}
+.signin-google-wrap {
+  max-width: 190px;
+  margin: 20px auto;
+}
+.signin-google-wrap a.google-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--black);
+  border: none;
+  background: #f6f8fc;
+  padding: 20px 15px;
+  max-width: 350px;
+  margin: auto;
+  justify-content: center;
+}
+.signin-google-wrap a.google-btn img {
+  margin-right: 10px;
+}
+.signup-wrap {
+  margin-top: 20px;
+  text-align: center;
+}
+.signup-wrap p {
+  color: var(--black);
+}
+::ng-deep.custom-modalbox {
+  width: 100% !important;
+  max-width: 750px !important;
+  height: 95%;
+  max-height: inherit;
+}
+::ng-deep.custom-modalbox mat-dialog-container .auth-box-wrap {
+  max-width: 550px;
+  margin: auto;
+}
+.password-wrap {
+  position: relative;
+}
+.password-wrap a.shw-hde {
+  position: absolute;
+  top: 71%;
+  right: 6px;
+  transform: translateY(-50%);
+}
+.password-wrap a.shw-hde img {
+  width: 28px;
+}

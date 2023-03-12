@@ -1,0 +1,154 @@
+.top-head-wrap {
+  background: #000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+.top-head-wrap .container-fluid {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.top-head-wrap .main-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.top-head-wrap .main-holder .logo-holder img {
+  max-width: 130px;
+}
+.top-head-wrap .main-holder .logo-holder h1 {
+  color: #EA9C9A;
+}
+.top-head-wrap .main-holder .right-menu-holder {
+  display: flex;
+  align-items: center;
+}
+.top-head-wrap .main-holder .right-menu-holder  .my-profile-wrap {
+  margin-right: 50px;
+}
+.top-head-wrap .main-holder .right-menu-holder  .my-profile-wrap  a {
+  text-decoration: none;
+}
+.top-head-wrap .main-holder .right-menu-holder .my-profile-wrap .drop-icon img {
+  max-width: 14px;
+  margin-left: 5px;
+}
+.top-head-wrap  .notify-wrap a.notification-icon {
+  display: block;
+}
+.top-head-wrap .notify-wrap
+span.color-hg {
+  width: 15px;
+  height: 15px;
+  display: block;
+  background: #FFC06A;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  right: -2px;
+  border: 2px solid #FFFFFF;
+}
+
+.top-head-wrap .my-profile-wrap .wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.top-head-wrap .my-profile-wrap .wrap .user-name-wrap {
+  color: #fff;
+  margin-left: 20px;
+
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.top-head-wrap .my-profile-wrap .wrap .img-holder {
+  position: relative;
+}
+
+.top-head-wrap .my-profile-wrap .wrap .img-holder img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.top-head-wrap .my-profile-wrap .wrap .img-holder .online-icon {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #20E245 0% 0% no-repeat padding-box;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.top-head-wrap .date-time-holder span {
+  font-size: 14px;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+
+.top-head-wrap .date-time-holder  p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+}
+.top-head-wrap .my-profile-wrap .wrap .sub-mnu-holder {
+  position: absolute;
+  top: 100%;
+  width: 200px;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  left: 0;
+  border: 1px solid #b3b3b3;
+  right: 0;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.top-head-wrap .my-profile-wrap .wrap .sub-mnu-holder ul {
+  margin: 0;
+  padding: 14px 0;
+  list-style: none;
+}
+
+.top-head-wrap .my-profile-wrap .wrap .sub-mnu-holder ul li {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+.top-head-wrap .my-profile-wrap .wrap .sub-mnu-holder ul li:last-child {
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+}
+
+.top-head-wrap .my-profile-wrap .wrap .sub-mnu-holder ul li a {
+  padding: 0 10px;
+  display: block;
+  color: #000;
+
+  font-weight: 700;
+  font-size: 16px;
+}
+.top-head-wrap .my-profile-wrap .wrap:hover .sub-mnu-holder{
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and ( max-width:1599px) {
+  .top-head-wrap .main-holder {padding: 20px 0px;}
+  .top-head-wrap .main-holder .logo-holder img {max-width: 100px;}
+  .top-head-wrap .my-profile-wrap .wrap .img-holder img {width: 50px; height: 50px;}
+  .top-head-wrap .container-fluid { padding-left: 30px;   padding-right: 30px; }
+}

@@ -1,0 +1,13 @@
+<div class="main-wraper"  *ngIf="currentUser" >
+  <app-header></app-header>
+  <div class="main-pannel">
+      <div class="holder">
+          <div class="container-fluid">
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="main-wraper"  *ngIf="!currentUser">
+  <router-outlet></router-outlet>
+</div>

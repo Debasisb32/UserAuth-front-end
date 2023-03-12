@@ -1,0 +1,163 @@
+/*..............common styles..............*/
+:root {
+    --pink: #EA9C9A;
+    --cream: #FADAD5;
+    --light-pink: #f8dcdc;
+    --lighter-pink: #FFF5F5;
+    --white: #ffffff;
+    --black: #000000;
+    --light-grey: #F1F1F1;
+    --text-grey: #808080;
+    --border-grey: #AEAEAE;
+    --lighter-sky: #F6F8FC;
+  }
+body { margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; font-size: 16px; color: #808080; font-weight: 400; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; overflow-x: hidden;}
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; font-weight: 600 !important; margin:0 0 30px; padding:0; color: var(--black);}
+h1{ font-size:48px;}
+h2{ font-size:48px;}
+h3{ font-size:24px;}
+h4{ font-size:20px;}
+h5{ font-size:18px;}
+h6{ font-size:16px;}
+ul{margin: 0; padding:0; list-style: none;}
+p{ margin:0 0 30px; line-height: 1.4; padding:0;}
+img{ max-width: 100%;}
+a, img{ border:0; text-decoration: none; outline: none;}
+a, a:link, a:visited, a:focus, a:hover { color: var( --black); text-decoration: none;  cursor: pointer;  outline: none; text-decoration: none; transition:all 0.3s ease 0s;}
+a:hover{ text-decoration:none;}
+
+b, strong { font-weight: 700; }
+
+input, textarea, select{ font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 16px; outline: none;}
+input[type="submit"]{ font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 16px; transition:all 0.3s ease 0s; outline: none;}
+select.form-control { background: url("../src/assets/images/down-arrow2.png") !important; background-color: #F6F8FC !important; background-position: 97% center !important; background-repeat: no-repeat !important; -webkit-appearance: none !important; background-size: 18px !important; }
+.form-control { width: 100% !important;  display: block !important;  background: #F6F8FC !important;  border: none !important; height: 50px !important;  padding: 0 20px !important;}
+input[type="text"]::placeholder {color: var( --text-grey); font-size: 16px; font-weight: 400;}
+textarea.form-control {height: 120px !important;}
+.link-text {display: inline-block; color: var(--pink) !important; text-decoration: none; border-bottom: 1px solid var(--pink); cursor: pointer; outline: none; text-decoration: none; transition: all 0.3s ease 0s; font-weight: 700;}
+.link-text:hover { color: var( --black); border-bottom: 1px solid var( --black);}
+.form-group{  margin-bottom: 25px;}
+
+.common-padding{padding-top: 60px; padding-bottom: 60px;}
+label{font-family: 'Open Sans', sans-serif;font-weight: 700; font-size: 16px; display: block;  color: var(--black);margin-bottom: 20px;}
+.btn {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    background: var(--pink) !important;
+    padding: 13px 31px !important;
+    color: var(--white) !important;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+}
+.btn:hover {background: var(--black);}
+.custom-container-fluid {padding-left: 75px; padding-right: 75px;}
+.form-control { border-bottom: 1px solid var(--white); border-left: 0; border-right: 0; border-top: 0; border-radius: 0; background: var(--white); font-size: 14px; color: var(--text-grey); padding: 16px 13px; height: 50px; box-shadow: none; }
+b{color: var(--black); font-weight: 700;}
+.cmmn-heading{margin-bottom: 30px;}
+.cmmn-text{max-width: 653px; margin: 0px auto 30px;}
+p.small-text {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.main-wraper .main-pannel {
+  margin-top: 67px;
+ /*  width: calc(100% - 320px); */
+  /* float: right; */
+ /*  padding: 30px; */
+}
+.black{background: var(--black); color:var(--white);}
+@media only screen and (min-width: 1599px) {
+  .container{max-width:1570px}
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.t-red {
+    color: red;
+    text-align: left;
+    display: block;
+    margin: 0;
+    position: relative;
+    top: 6px;
+    font-size: 12px;
+}
+/*
+.main-pannel {
+    margin-left: 300px;
+    padding: 30px;
+} */
+
+mat-panel-title.mat-expansion-panel-header-title.ng-tns-c99-1 {
+    color: white;
+}
+.cdk-overlay-container, .cdk-global-overlay-wrapper {
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.cdk-overlay-connected-position-bounding-box {
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    min-width: 1px;
+    min-height: 1px;
+}
+.cdk-overlay-pane {
+    position: absolute;
+    pointer-events: auto;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+.mat-select-panel-wrap {
+    flex-basis: 100%;
+}
+.mat-select-panel:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 4px -1px #0003, 0 4px 5px #00000024, 0 1px 10px #0000001f;
+}
+.mat-select-panel {
+    min-width: 112px !important;
+    max-width: 280px !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 256px !important;
+    min-width: 100% !important;
+    border-radius: 4px;
+    outline: 0;
+}
+.mat-option {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    line-height: 48px;
+    height: 48px;
+    padding: 0 16px;
+    text-align: left;
+    text-decoration: none;
+    max-width: 100%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* main body style */
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
